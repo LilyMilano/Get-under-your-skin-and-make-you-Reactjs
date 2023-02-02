@@ -1,25 +1,15 @@
-import { useState } from 'react';
-import moana from './assets/moana.png';
-import './App.css';
+import React  from 'react';
+import Navbar from './components/Navbar.jsx';
+import Main from './components/Main.jsx';
+// import './App.css';
 
-function App() {
-	const [count, setCount] = useState(0);
-
-	return (
-		<div className="App">
+export default function App() {
+	
+		return(
 			<div>
-				<img src={moana} className="moana" alt="Moana logo" />
-				<p>Hello Scrimba React Students!</p>
-				<button onClick={() => setCount((count) => count + 1)}>
-					count is {count}
-				</button>
-				<p>
-					Edit <code>src/App.jsx</code> and save to test HMR
-				</p>
+			<Navbar/>
+			<Main/>
 			</div>
-			<p className="read-the-docs">Learn more</p>
-		</div>
-	);
+		)
 }
 
-export default App;
