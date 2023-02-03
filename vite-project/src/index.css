@@ -1,11 +1,39 @@
-:root {
-  font-family:'Inter', sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-
+* {
+	box-sizing: border-box;
 }
 
-h1 {
-  font-size: 3.2em;
+body {
+	margin: 0;
+	font-family: 'Inter', sans-serif;
 }
 
+nav {
+	display: flex;
+	align-items: center;
+	background-color: #21222a;
+	height: 90px;
+	padding: 30px 25px;
+}
+
+.nav--icon {
+	height: 30px;
+	margin-right: 7px;
+}
+
+.nav--logo_text,
+.nav--title {
+	margin: 0;
+}
+
+.nav--logo_text {
+	margin-right: auto;
+	color: #61dafb;
+	font-weight: 700;
+	font-size: 22px;
+}
+
+.nav--title {
+	color: #deebf8;
+	font-weight: 600;
+	font-size: 16px;
+}
