@@ -1,7 +1,15 @@
 import React from 'react';
+import Contacts from './pages/Contacts';
+import { Fragment } from 'react';
 
 const App = () => {
-	return <div>Hello World!</div>;
+	return (
+	
+	<Fragment>
+	<Contacts/>
+	</Fragment>
+	
+	);
 };
 
 export default App;
