@@ -1,5 +1,7 @@
 import React from 'react';
 import { useContacts } from '../hooks/useContacts';
+import ContactRow from '../components/ContactRow';
+
 
 const Contacts = () => {
 	const { contacts } = useContacts();
@@ -20,25 +22,16 @@ const Contacts = () => {
 				</thead>
 
 				<tbody>
-					{contacts.map((contact) => (
-						<tr key={contact.email}>
-							<td>{contact.id}</td>
-							<td>{contact.email}</td>
-							<td>
-								{contact.first_name} {contact.last_name}
-							</td>
-							<td>
-								<img
-									src={contact.avatar}
-									className="img-thumbnail"
-									alt="contacts"
-									style={{
-										width: 80,
-									}}
-								/>
-							</td>
-						</tr>
-					))}
+					
+					{
+						contacts.map(contact =>(
+							<ContactRow
+								key={contact.email}
+								contact={contact}
+							/>
+						))
+					}
+				
 				</tbody>
 			</table>
 		</div>
